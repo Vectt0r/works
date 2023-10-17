@@ -37,7 +37,7 @@ public class Produto {
     }
 
     public boolean estaVencido(Data dataAtual) {
-        // Comparar a data de validade com a data atual
+    // Comparar a data de validade com a data atual
         return dataValidade.getAno() < dataAtual.getAno() ||
                (dataValidade.getAno() == dataAtual.getAno() && dataValidade.getMes() < dataAtual.getMes()) ||
                (dataValidade.getAno() == dataAtual.getAno() && dataValidade.getMes() == dataAtual.getMes() && dataValidade.getDia() < dataAtual.getDia());
@@ -47,6 +47,7 @@ public class Produto {
     @Override
     public String toString(){
         return "Nome do Produto: " + nome +
-               "\nPreço do Produto: " + preco;
+               "\nPreço do Produto: " + preco +
+               "\nData de Validade" + dataValidade;
     }
 }

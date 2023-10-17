@@ -86,7 +86,7 @@ public class Endereco {
         "Nome do CEP: " + cep +
         "Numero: " + numero +
         "Complemento: " + numero +
-        "\nPreço do Produto: " + complemento;
+        "\nPreÃ§o do Produto: " + complemento;
     }
 
 }
