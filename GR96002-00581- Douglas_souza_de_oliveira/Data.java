@@ -19,7 +19,7 @@ public class Data {
         }
     }
 
-    // M√©todo para verificar se o ano √© bissexto
+    // MÈtodo para verificar se o ano È bissexto
     public boolean verificaAnoBissexto() {
         if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
             return true;
@@ -27,7 +27,7 @@ public class Data {
         return false;
     }
 
-    // M√©todo privado para verificar se a data √© v√°lida
+    // MÈtodo privado para verificar se a data v·lida
     private boolean verificaDataValida(int dia, int mes, int ano) {
         if (ano < 0 || mes < 1 || mes > 12 || dia < 1 || dia > 31) {
             return false;
@@ -40,7 +40,7 @@ public class Data {
             }
         }
 
-        // Verifica fevereiro e anos bissextos
+        // Verifica fevereiro e anos bissextos // 
         if (mes == 2) {
             if (verificaAnoBissexto()) {
                 if (dia > 29) {

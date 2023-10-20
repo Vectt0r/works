@@ -1,30 +1,32 @@
+import java.util.Arrays;
+
 public class Loja {
-    //Atributos da Classe
     private String nome;
     private int quantidadeFuncionarios;
     private double salarioBaseFuncionario;
     private Endereco endereco;
     private Data dataFundacao;
+    private Produto[] estoqueProdutos;
 
-    //Metodo Contrutor 1 da Classe Loja
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao) {
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao, int capacidadeEstoque) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
+        this.estoqueProdutos = new Produto[capacidadeEstoque];
     }
 
     //Metodo Contrutor 2 da Classe Loja
-    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao ) {
+    public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int capacidadeEstoque) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.endereco = endereco;
         this.dataFundacao = dataFundacao;
         this.salarioBaseFuncionario = -1;
+        this.estoqueProdutos = new Produto[capacidadeEstoque];
     }
 
-    //Metodos Get and Set
     public String getNome() {
         return nome;
     }
@@ -90,13 +92,50 @@ public class Loja {
         }
     }
 
-    //Metodo de FormataÃ§Ã£o de texto
+    // Método para obter o estoque de produtos da loja
+    public Produto[] getEstoqueProdutos() {
+        return estoqueProdutos;
+    }
+
+    // Método para imprimir os produtos no estoque da loja
+    public void imprimeProdutos() {
+        for (Produto produto : estoqueProdutos) {
+            if (produto != null) {
+                System.out.println(produto);
+            }
+        }
+    }
+
+    // Método para inserir um produto no estoque da loja
+    public boolean insereProduto(Produto produto) {
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i] == null) {
+                estoqueProdutos[i] = produto;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Método para remover um produto do estoque da loja com base no nome
+    public boolean removeProduto(String nomeProduto) {
+        for (int i = 0; i < estoqueProdutos.length; i++) {
+            if (estoqueProdutos[i] != null && estoqueProdutos[i].getNome().equals(nomeProduto)) {
+                estoqueProdutos[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Metodo de Formatação de texto
     @Override
-    public String toString(){
+    public String toString() {
         return "Nome da loja: " + nome +
                "\nQuantidade de funcionarios: " + quantidadeFuncionarios +
                "\nSalário base dos funcionarios: " + salarioBaseFuncionario +
                "\nEndereço: " + endereco +
-               "\nData de Fundação: " + dataFundacao;
+               "\nData de Fundação: " + dataFundacao +
+               "\nEstoque de Produtos: " + Arrays.toString(estoqueProdutos);
     }
 }
