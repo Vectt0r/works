@@ -17,7 +17,7 @@ public class Loja {
         this.estoqueProdutos = new Produto[capacidadeEstoque];
     }
 
-    //Metodo Contrutor 2 da Classe Loja
+    // Método Contrutor 2 da Classe Loja
     public Loja(String nome, int quantidadeFuncionarios, Endereco endereco, Data dataFundacao, int capacidadeEstoque) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
@@ -67,7 +67,7 @@ public class Loja {
         this.dataFundacao = dataFundacao;
     }
 
-    //Metodo de verificacao do total gasto com salario
+    // Método de verificacao do total gasto com salario
     public double gastosComSalario() {
         if(salarioBaseFuncionario != - 1){
             double salarioTotal = quantidadeFuncionarios * salarioBaseFuncionario;
@@ -78,7 +78,7 @@ public class Loja {
         }
     }
 
-    //Metodo de Verificacao do tamanho da loja
+    // Método de Verificacao do tamanho da loja
     public char tamanhoDaLoja() {
         if(quantidadeFuncionarios < 10){
             return 'P';
@@ -128,7 +128,7 @@ public class Loja {
         return false;
     }
 
-    //Metodo de Formatação de texto
+    // Método de Formatação de texto
     @Override
     public String toString() {
         return "Nome da loja: " + nome +

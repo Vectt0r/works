@@ -8,7 +8,7 @@ public class Endereco {
     private String numero;
     private String complemento;
 
-    //Metodo Contrutor da Classe Endereco
+    // Método Contrutor da Classe Endereco
     public Endereco(String nomeDaRua, String cidade, String estado, String pais, String cep, String numero, String complemento) {
         this.nomeDaRua = nomeDaRua;
         this.cidade = cidade;
@@ -19,7 +19,6 @@ public class Endereco {
         this.complemento = complemento;
     }
 
-    //Metodos Get and Set
     public String getNomeDaRua() {
         return nomeDaRua;
     }

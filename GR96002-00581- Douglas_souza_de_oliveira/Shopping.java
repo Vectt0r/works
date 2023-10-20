@@ -33,6 +33,7 @@ public class Shopping {
         this.lojas = lojas;
     }
 
+    // Método para inserir uma loja no array a partir da entrada, 'for' ultilizado para buscar um espaço null no array, caso bem sucedido retorna true caso contrario false
     public boolean insereLoja(Loja loja) {
         for(int i = 0; i < lojas.length; i++) {
             if(lojas[i] == null) {
@@ -43,6 +44,7 @@ public class Shopping {
         return false;
     }
 
+    // Método para remover uma loja, uma busca é feita no array a partir do nome de entrada, caso a loja exista, seu espaço no array sera setado como Null e retornara true
     public boolean removeLoja(String nome) {
         for(int i = 0; i < lojas.length; i++){
             if(lojas[i] != null && lojas[i].getNome().equals(nome)){

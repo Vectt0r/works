@@ -56,7 +56,6 @@ public class Data {
         return true;
     }
 
-    // Getters e setters
     public int getDia() {       
         return dia;
     }
@@ -81,7 +80,7 @@ public class Data {
         this.ano = ano;
     }
 
-    // Metodo toString para representar a data no formato dia/mes/ano
+    // Método toString para representar a data no formato dia/mes/ano
     @Override
     public String toString() {
         return dia + "/" + mes + "/" + ano;

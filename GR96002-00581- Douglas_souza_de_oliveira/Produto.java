@@ -11,7 +11,6 @@ public class Produto {
         this.dataValidade = dataValidade;
     }
 
-    //Metodos Get and Set
     public String getNome(){
         return nome;
     }
