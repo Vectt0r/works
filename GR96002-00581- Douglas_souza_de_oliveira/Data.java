@@ -28,7 +28,7 @@ public class Data {
     }
 
     // Método privado para verificar se a data válida
-    private boolean verificaDataValida(int dia, int mes, int ano) {
+    public boolean verificaDataValida(int dia, int mes, int ano) {
         if (ano < 0 || mes < 1 || mes > 12 || dia < 1 || dia > 31) {
             return false;
         }

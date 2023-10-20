@@ -37,7 +37,7 @@ public class Produto {
     }
 
     public boolean estaVencido(Data dataAtual) {
-    // Comparar a data de validade com a data atual
+    // Comparar a data de validade com a data atual operador || 'or'
         return dataValidade.getAno() < dataAtual.getAno() ||
                (dataValidade.getAno() == dataAtual.getAno() && dataValidade.getMes() < dataAtual.getMes()) ||
                (dataValidade.getAno() == dataAtual.getAno() && dataValidade.getMes() == dataAtual.getMes() && dataValidade.getDia() < dataAtual.getDia());
