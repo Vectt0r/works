@@ -83,7 +83,7 @@ public class Loja {
         if(quantidadeFuncionarios < 10){
             return 'P';
         }  
-        else if (quantidadeFuncionarios >= 10 && quantidadeFuncionarios <= 30){
+        else if (quantidadeFuncionarios < 30){
             return 'M';
 
         } 
